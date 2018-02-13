@@ -9,37 +9,29 @@ public class Calculator {
     private double b;
 
     @Autowired
-    Display display;
+    private Display display;
 
     public double sum(double a, double b) {
-        display.displayValue(a);
-        display.displayValue(b);
         double sum = a + b;
-        System.out.println("Wynik dodawania to " + sum);
+        display.displayValue(sum);
         return sum;
     }
 
     public double sub(double a, double b) {
-        display.displayValue(a);
-        display.displayValue(b);
         double sub = a - b;
-        System.out.println("wynik odejmowania to: " + sub);
+        display.displayValue(sub);
         return sub;
     }
 
     public double mul(double a, double b) {
-        display.displayValue(a);
-        display.displayValue(b);
         double mul = a * b;
-        System.out.println("Wynik mnożenia to: " + mul);
+        display.displayValue(mul);
         return mul;
     }
 
     public double div(double a, double b) {
-        display.displayValue(a);
-        display.displayValue(b);
         double div = a/b;
-        System.out.println("Wynik dzielenia to: " + div);
+        display.displayValue(div);
         return div;
     }
 }
