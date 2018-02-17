@@ -17,12 +17,12 @@ public class BoardTestSuite {
         board.getInProgressList().getTasks().add("sadasdas");
         board.getToDoList().getTasks().add("pppppasdasdasd");
         //When
-        boolean list1 = board.getDoneList().getTasks().isEmpty();
-        boolean list2 = board.getInProgressList().getTasks().isEmpty();
-        boolean list3 = board.getToDoList().getTasks().isEmpty();
+        boolean list1 = board.getDoneList().getTasks().contains("sdds");
+        boolean list2 = board.getInProgressList().getTasks().contains("sadasdas");
+        boolean list3 = board.getToDoList().getTasks().contains("pppppasdasdasd");
         //Then
-        Assert.assertFalse(list1);
-        Assert.assertFalse(list2);
-        Assert.assertFalse(list3);
+        Assert.assertTrue(list1);
+        Assert.assertTrue(list2);
+        Assert.assertTrue(list3);
     }
 }
